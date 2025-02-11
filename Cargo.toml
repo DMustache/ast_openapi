@@ -1,0 +1,19 @@
+[package]
+name = "ast_openapi"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Generate OpenAPI without any boilerplate"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "2.0.98", features = [
+    "parsing",
+    "full",
+    "printing",
+    "extra-traits",
+    "visit",
+] }
+proc-macro2 = { version = "1.0.70", features = ["span-locations"] }
